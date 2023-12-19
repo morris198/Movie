@@ -1,0 +1,9 @@
+scikit-learn
+streamlit
+pandas
+joblib
+requests
+FastAPI
+HTTPException
+BaseModel
+FileResponse
