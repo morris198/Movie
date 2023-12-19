@@ -3,7 +3,7 @@ streamlit
 pandas
 joblib
 requests
-FastAPI
-HTTPException
+fastapi==0.105.0
+httpx==0.23.0  # (or the version that includes HTTPException)
 BaseModel
 FileResponse
