@@ -1,6 +1,6 @@
 scikit-learn
 streamlit
-pandas==2.1.4
+pandas==1.5.3
 joblib
 requests
 fastapi==0.105.0
