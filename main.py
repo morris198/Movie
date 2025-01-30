@@ -4,7 +4,7 @@ import joblib
 from typing import List
 from starlette.responses import FileResponse
 from urllib.parse import quote
-import requests  # Add this line to import the 'requests' module
+from security import safe_requests
 
 
 app = FastAPI(debug=True)
@@ -15,7 +15,7 @@ class Movie(BaseModel):
 
 def fetch_poster(movie_id):
     url = "https://api.themoviedb.org/3/movie/549?api_key=7d110d80ffcba3c1ffc2658585e440a6&language=en-US".format(movie_id)
-    data = requests.get(url)
+    data = safe_requests.get(url)
     
     
     if data.status_code != 200:
