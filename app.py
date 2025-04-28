@@ -12,7 +12,7 @@ st.set_page_config(
 
 def fetch_poster(movie_id):
     url = "https://api.themoviedb.org/3/movie/{}?api_key=7d110d80ffcba3c1ffc2658585e440a6&language=en-US".format(movie_id)
-    data = requests.get(url)
+    data = requests.get(url, timeout=60)
     data = data.json()
     poster_path = data['poster_path']
     full_path = "https://image.tmdb.org/t/p/w500/" + poster_path

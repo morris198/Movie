@@ -15,7 +15,7 @@ class Movie(BaseModel):
 
 def fetch_poster(movie_id):
     url = "https://api.themoviedb.org/3/movie/549?api_key=7d110d80ffcba3c1ffc2658585e440a6&language=en-US".format(movie_id)
-    data = requests.get(url)
+    data = requests.get(url, timeout=60)
     
     
     if data.status_code != 200:
